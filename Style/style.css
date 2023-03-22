@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: white;
+}
+/*========================= HEADER===================*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: beige;
+  z-index: 1000;
+  padding: 10px;
+  min-height: 60px;
+}
+.entete {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50px;
+}
+#presentation {
+  background-image: url("../img/section.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#presentation > h2 {
+  color: #ddd;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2.5em;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+#presentation > p {
+  color: #ddd;
+  font-size: 13px;
+  text-align: center;
+  width: 50%;
+  font-weight: bolder;
+}
+
+.p-reservation,
+.p-menu {
+  text-align: center;
+  font-size: 12px;
+}
+
+.page-item2,
+.page-item3 {
+  display: flex;
+  align-items: center;
+}
+
+.page-item3 a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all 0.7s ease;
+}
+
+.page-item3 a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*============================= LOGO =====================*/
+#logo {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: black;
+  margin: 0;
+  order: 1;
+}
+/*============================ NAVBAR*/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgba(141, 96, 14, 0.788);
+  transition: 0.3s;
+}
+
+#menu,
+#reservation,
+#contact,
+#avis {
+  background-color: white;
+  padding: 20px;
+  min-width: 50%;
+}
+
+#menu > h2,
+#reservation > h2,
+#contact > h2,
+#avis > h2 {
+  text-align: center;
+  color: #333;
+  font-weight: bolder;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+/*=================== BUTTON 2 FORM reserver=====================*/
+.button-2 {
+  background-color: beige;
+  color: #333;
+  border-radius: 10px;
+  border: #ddd;
+  font-size: 12px;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: all 0.7s ease;
+}
+
+.button-2:hover {
+  background-color: rgb(245, 245, 197);
+}
+
+/*======================= BUTTON reservation ===============*/
+.button {
+  background-color: beige;
+  color: #333;
+  border-radius: 2rem;
+  font-size: 12px;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin: 4px 2px;
+  transition: all 0.7s ease;
+}
+
+.button:hover {
+  background-color: rgb(245, 245, 197);
+  transition: 0.1s;
+}
+
+/*===================== Section MENU=================*/
+.block-center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item-1 > h3,
+.item-2 > h3,
+.item-3 > h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.item-1,
+.item-2,
+.item-3 {
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.2s;
+}
+
+.item-1:hover,
+.item-2:hover,
+.item-3:hover {
+  background-color: #ddd;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 65px 90px -55px #565656;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+/*===================== CONTAINER======================*/
+
+main {
+  /* max-width: 960px; */
+  margin: 0 auto;
+}
+
+/*================ CONTACT ======================*/
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-contact {
+  /*Paragraphe contact*/
+  text-align: center;
+  font-size: 12px;
+}
+
+.block-carte {
+  /*Container carte*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*===================== SCORLLBAR===============*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: beige;
+  border-radius: 15px;
+}
+
+/*=========================== AVIS===================*/
+.card-avis {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  background-color: #f8f8f8;
+  margin-right: 20px;
+  max-width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-1 img,
+.card-2 img,
+.card-3 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  font-size: 14.5px;
+}
+
+.stras {
+  color: rgb(235, 235, 61);
+  margin-bottom: 20px;
+}
+
+/*================= Responsive =================*/
+
+@media screen and (max-width: 960px) {
+  .card-avis {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-avis {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*====================== FOOTER =================*/
+.footer_section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 60px 11% 110px;
+  background-color: beige;
+}
+
+.block-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 50px;
+}
+
+.block-footer h3 {
+  font-size: 23px;
+  margin-bottom: 23px;
+  position: relative;
+}
+
+.block-footer h3::after {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #333;
+  bottom: -6px;
+  left: 0;
+}
+
+.A-propos-footer > p {
+  font-size: 15px;
+  opacity: 0.8;
+  line-height: 26px;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.A-propos-footer .social_links .fa-brands {
+  font-size: 22px;
+  margin-right: 8px;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+.social_links .fa-brands:hover {
+  color: #fff;
+}
+
+.liens-rapides .liens {
+  display: flex;
+  flex-direction: column;
+}
+
+.liens a {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.liens a:hover {
+  transition: all 0.7s ease;
+  color: #fff;
+}
+
+.contact-footer p {
+  margin-bottom: 14px;
+}
+
+.contact-footer p .fa-solid {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer_section > p {
+  position: absolute;
+  width: 100%;
+  bottom: 27px;
+  left: 0;
+  text-align: center;
+  font-size: 17px;
+  opacity: 0.8;
+}
+
+/*================== btn SCROLL===========*/
+
+.bton {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(247, 203, 84);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+.bton:hover {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(247, 203, 84);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.7s ease;
+  opacity: 0.9;
+}
+
+.icone {
+  width: 30px;
+}
+/*===================== Partie Formulaire de connection=======================*/
+#form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ddd;
+  transform: translate(-50%, -50%);
+}

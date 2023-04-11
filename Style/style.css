@@ -19,14 +19,14 @@ header {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   background-color: beige;
   z-index: 1000;
-  padding: 10px;
-  min-height: 60px;
+  padding: 15px;
 }
 .entete {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 50px;
+  padding: 0 100px;
 }
 #presentation {
   background-image: url("../img/section.jpg");
@@ -61,7 +61,7 @@ header {
 .p-reservation,
 .p-menu {
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .page-item2,
@@ -75,10 +75,11 @@ header {
   color: black;
   margin-right: 10px;
   font-size: 16px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   transition: all 0.7s ease;
+  line-height: auto;
 }
 
 .page-item3 a:hover {
@@ -94,6 +95,17 @@ header {
   color: black;
   margin: 0;
   order: 1;
+}
+
+#logo a {
+  color: black;
+  padding: 20px;
+}
+
+#logo a:hover {
+  padding: 20px;
+  color: gray;
+  transition: all 0.7s ease;
 }
 /*============================ NAVBAR*/
 nav ul {
@@ -111,13 +123,14 @@ nav li:first-child {
 }
 
 nav a {
-  color: black;
+  font-size: 1em;
+  color: #333;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: rgba(141, 96, 14, 0.788);
-  transition: 0.3s;
+  color: gray;
+  transition: all 0.5s ease;
 }
 
 #menu,
@@ -291,18 +304,205 @@ main {
 }
 
 /*================= Responsive =================*/
+@media only screen and (max-width: 1200px) {
+  nav a:hover {
+    color: gray;
+    transition: 0.3s;
+  }
+  nav li {
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
 
-@media screen and (max-width: 960px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 6px 0;
+  }
+
+  .page-item3 {
+    display: none;
+  }
+
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: beige;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+
+  .nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .nav-bar ul li a:hover {
+    margin-bottom: 12px;
+  }
+
+  .block-carte {
+    /*Container carte*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /*responsive representation*/
+  #presentation > h2 {
+    text-align: center;
+    color: #ddd;
+    font-weight: bolder;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 786px) {
   .card-avis {
-    flex: 100%;
-    max-width: 80%;
+    /*flex: 100%;*/
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    background-color: #f8f8f8;
+    margin-right: 20px;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .block-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .button {
+    background-color: beige;
+    color: #333;
+    border-radius: 2rem;
+    font-size: 10px;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition: all 0.7s ease;
+  }
+
+  .button:hover {
+    background-color: rgb(245, 245, 197);
+    transition: 0.1s;
+  }
+  #presentation > h2 {
+    text-align: center;
+    color: #ddd;
+    font-weight: bolder;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  .button {
+    background-color: beige;
+    color: #333;
+    border-radius: 2rem;
+    font-size: 12px;
+    padding: 1rem;
+    text-transform: uppercase;
+    margin: 4px 2px;
+    transition: all 0.7s ease;
+    animation: wiggle 3s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  .button:hover {
+    background-color: rgb(245, 245, 197);
+    transition: 0.1s;
+  }
+
+  .bton {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(247, 203, 84);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.3;
   }
 }
 
 @media screen and (max-width: 600px) {
   .card-avis {
     flex: 100%;
+    flex-direction: column-reverse;
     max-width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and(max-width: 540px) {
+  #presentation {
+    width: 100vh;
   }
 }
 

@@ -1,4 +1,4 @@
-### Titre du Projet : *Site de Réservation de Table*
+# Titre du Projet : *Site de Réservation de Table*
 
 ## Description :
 

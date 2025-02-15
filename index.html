@@ -26,7 +26,7 @@
     <header>
       <div class="entete">
         <div class="page-item">
-          <h1 id="logo"><a href="">Restaurant XYZ</a></h1>
+          <h1 id="logo"><a href="#presentation">Restaurant XYZ</a></h1>
         </div>
         <div class="page-item2">
             <div class="hamburger">
@@ -37,7 +37,7 @@
             <nav class="nav-bar">
               <ul class="nav-links">
                 <li>
-                  <a href="index.html"
+                  <a href="#presentation"
                     ><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Accueil</a>
                 </li>
                 <li>
@@ -57,10 +57,13 @@
                 </li>
               </ul>
           </nav>
-          <div class="page-item3">
-            <a href="#"><i class="fa-regular fa-user"></i>&nbsp;&nbsp;S'inscrire</a>
-            <a href="#"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Se connecter</a>
-          </div>
+          <!--
+             <div class="page-item3">
+              <a href="#"><i class="fa-regular fa-user"></i>&nbsp;&nbsp;S'inscrire</a>
+              <a href="#"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Se connecter</a>
+            </div>
+          -->
+         
          <!--<span><i class="fa-solid fa-cart-shopping"></i></span>-->
         </div>
       </div>
@@ -342,7 +345,10 @@
       <!--<hr class="m-4" />-->
       
       </div>
-      <p>2023 &#169 Copyright | All Rights Reserved to Restaurant XYZ</p>
+      
+       <p>
+          &#169; <span id="year"></span> Copyright | All Rights Reserved to Restaurant XYZ
+        </p>
       </div>
     </footer>
     <script src="Js/app.js" charset="utf-8"></script>
